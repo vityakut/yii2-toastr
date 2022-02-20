@@ -3,7 +3,7 @@ Yii2 - Javascript Toast Notifications
 
 Simple javascript toast notifications - Javascript library for non-blocking notifications. jQuery is required. The goal is to create a simple core library that can be customized and extended.
 
-[![Latest Stable Version](https://poser.pugx.org/lavrentiev/yii2-toastr/v/stable)](https://packagist.org/packages/lavrentiev/yii2-toastr) [![Total Downloads](https://poser.pugx.org/lavrentiev/yii2-toastr/downloads)](https://packagist.org/packages/lavrentiev/yii2-toastr) [![Latest Unstable Version](https://poser.pugx.org/lavrentiev/yii2-toastr/v/unstable)](https://packagist.org/packages/lavrentiev/yii2-toastr) [![License](https://poser.pugx.org/lavrentiev/yii2-toastr/license)](https://packagist.org/packages/lavrentiev/yii2-toastr)
+[![Latest Stable Version](https://poser.pugx.org/vityakut/yii2-toastr/v/stable)](https://packagist.org/packages/vityakut/yii2-toastr) [![Total Downloads](https://poser.pugx.org/vityakut/yii2-toastr/downloads)](https://packagist.org/packages/vityakut/yii2-toastr) [![Latest Unstable Version](https://poser.pugx.org/vityakut/yii2-toastr/v/unstable)](https://packagist.org/packages/vityakut/yii2-toastr) [![License](https://poser.pugx.org/vityakut/yii2-toastr/license)](https://packagist.org/packages/vityakut/yii2-toastr)
 
 Установка
 ---------
@@ -11,27 +11,27 @@ Simple javascript toast notifications - Javascript library for non-blocking noti
 
 Установка расширения через Composer, выполнить следующую команду:
 ```
-composer require --prefer-dist lavrentiev/yii2-toastr
+composer require --prefer-dist vityakut/yii2-toastr
 ```
 или (master)
 ```
-composer require --prefer-dist lavrentiev/yii2-toastr "dev-master"
+composer require --prefer-dist vityakut/yii2-toastr "dev-master"
 ```
 или внести изменения в секцию `require` в `composer.json` и выполнить `composer update`
 ```
-"lavrentiev/yii2-toastr": "^2.0"
+"vityakut/yii2-toastr": "^2.0"
 ```
 или (master)
 ```
-"lavrentiev/yii2-toastr": "dev-master"
+"vityakut/yii2-toastr": "dev-master"
 ```
 
 ### Уведомления Notification::widget()
 
-![alt text](https://raw.githubusercontent.com/lavrentiev/yii2-toastr/master/screenshot/screenshot-1-2.png "Уведомления Notification::widget()")
+![alt text](https://raw.githubusercontent.com/vityakut/yii2-toastr/master/screenshot/screenshot-1-2.png "Уведомления Notification::widget()")
 
 ```php
-use lavrentiev\widgets\toastr\Notification;
+use vityakut\widgets\toastr\Notification;
 
 Notification::widget([
     'type' => 'info',
@@ -79,7 +79,7 @@ Notification::widget([
 ```
 Также присутствует возможность настройки произвольного уведомления, по параметрам предусмотренным разработчиками [Toastr by CodeSeven](https://github.com/CodeSeven/toastr)
 
-![alt text](https://raw.githubusercontent.com/lavrentiev/yii2-toastr/master/screenshot/screenshot-3.png "Уведомления Notification::widget()")
+![alt text](https://raw.githubusercontent.com/vityakut/yii2-toastr/master/screenshot/screenshot-3.png "Уведомления Notification::widget()")
 ```php
 Notification::widget([
     'type' => Notification::TYPE_ERROR,
@@ -110,19 +110,19 @@ Notification::widget([
 Подключение осуществляеться глобально допустим в layouts проекта.
 
 ```php
-<?= \lavrentiev\widgets\toastr\NotificationFlash::widget() ?>
+<?= \vityakut\widgets\toastr\NotificationFlash::widget() ?>
 ```
 
 Также присутствует возможность настройки уведомлений, по параметрам предусмотренным разработчиками [Toastr by CodeSeven](https://github.com/CodeSeven/toastr)
 
 ```php
-<?= \lavrentiev\widgets\toastr\NotificationFlash::widget([
+<?= \vityakut\widgets\toastr\NotificationFlash::widget([
     'options' => [
         "closeButton" => true,
         "debug" => false,
         "newestOnTop" => false,
         "progressBar" => false,
-        "positionClass" => \lavrentiev\widgets\toastr\NotificationFlash::POSITION_TOP_RIGHT,
+        "positionClass" => \vityakut\widgets\toastr\NotificationFlash::POSITION_TOP_RIGHT,
         "preventDuplicates" => false,
         "onclick" => null,
         "showDuration" => "300",
@@ -137,7 +137,7 @@ Notification::widget([
 ]) ?>
 ```
 
-![alt text](https://raw.githubusercontent.com/lavrentiev/yii2-toastr/master/screenshot/screenshot-4.png "Уведомления NotificationFlash::widget()")
+![alt text](https://raw.githubusercontent.com/vityakut/yii2-toastr/master/screenshot/screenshot-4.png "Уведомления NotificationFlash::widget()")
 
 ```php
 \Yii::$app->session->setFlash('error', 'This is the message');
@@ -146,7 +146,7 @@ Notification::widget([
 \Yii::$app->session->setFlash('warning', 'This is the message');
 ```
 
-![alt text](https://raw.githubusercontent.com/lavrentiev/yii2-toastr/master/screenshot/screenshot-5.png "Уведомления NotificationFlash::widget()")
+![alt text](https://raw.githubusercontent.com/vityakut/yii2-toastr/master/screenshot/screenshot-5.png "Уведомления NotificationFlash::widget()")
 
 ```php
 \Yii::$app->session->setFlash('warning', ['Error 1', 'Error 2', 'Error 3']);
